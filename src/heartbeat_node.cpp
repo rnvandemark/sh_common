@@ -1,13 +1,14 @@
 #include "sh_common/heartbeat_node.hpp"
+#include "sh_common/ros_names.hpp"
 
-#define HEARTPEAD_PERIOD_PARAM_NAME "heartbeat_period"
+#define HEARTBEAT_PERIOD_PARAM_NAME sh::names::params::HEARTBEAT_PERIOD_MS
 
 sh::HeartbeatNode::HeartbeatNode(
     const std::string& node_name,
     const rclcpp::NodeOptions& options)
         : Node(node_name, options) {
-    declare_parameter<int>(HEARTPEAD_PERIOD_PARAM_NAME);
-    const int period = get_parameter(HEARTPEAD_PERIOD_PARAM_NAME).as_int();
+    declare_parameter<int>(HEARTBEAT_PERIOD_PARAM_NAME);
+    const int period = get_parameter(HEARTBEAT_PERIOD_PARAM_NAME).as_int();
     heartbeat_pub = create_publisher<std_msgs::msg::Header>(
         "heartbeat",
         10);
