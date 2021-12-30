@@ -42,5 +42,9 @@ install(
     INCLUDES DESTINATION include
 )
 
+ament_export_include_directories(include)
+ament_export_dependencies(ament_cmake rclcpp std_msgs Python3)
+ament_export_libraries(heartbeat_node)
+
 ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/${PROJECT_NAME}.dsv.in")
 ament_package(CONFIG_EXTRAS "cmake/ConfigExtras.cmake")
