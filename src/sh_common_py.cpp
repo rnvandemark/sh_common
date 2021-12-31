@@ -15,7 +15,7 @@ BOOST_PYTHON_MODULE(sh_common_py) {
     // Add topics
     {
         bp::scope sc = bp::class_<sn::topics>("topics", bp::no_init);
-        sc.attr("HEARTBEAT") = sn::topics::HEARTBEAT;
+        sc.attr("HEARTBEAT_SUFFIX") = sn::topics::HEARTBEAT_SUFFIX;
         sc.attr("REQUESTED_MODE_CHANGES") = sn::topics::REQUESTED_MODE_CHANGES;
         sc.attr("CONFIRMED_MODE_CHANGES") = sn::topics::CONFIRMED_MODE_CHANGES;
         sc.attr("LEFT_COLOR_PEAK") = sn::topics::LEFT_COLOR_PEAK;
