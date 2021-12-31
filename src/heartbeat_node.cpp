@@ -6,8 +6,9 @@
 
 sh::HeartbeatNode::HeartbeatNode(
     const std::string& node_name,
+    const std::string& ns,
     const rclcpp::NodeOptions& options)
-        : Node(node_name, "/smart_home", options) {
+        : Node(node_name, ns, options) {
     declare_parameter<int>(HEARTBEAT_PERIOD_PARAM_NAME);
     const int period = get_parameter(HEARTBEAT_PERIOD_PARAM_NAME).as_int();
     heartbeat_pub = create_publisher<std_msgs::msg::Header>(

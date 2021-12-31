@@ -12,6 +12,7 @@ protected:
 
 public:
     HeartbeatNode(const std::string& node_name,
+                  const std::string& ns = "",
                   const rclcpp::NodeOptions& options = rclcpp::NodeOptions());
 };
 }
