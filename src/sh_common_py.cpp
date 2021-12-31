@@ -18,6 +18,7 @@ BOOST_PYTHON_MODULE(sh_common_py) {
         sc.attr("HEARTBEAT_SUFFIX") = sn::topics::HEARTBEAT_SUFFIX;
         sc.attr("REQUESTED_MODE_CHANGES") = sn::topics::REQUESTED_MODE_CHANGES;
         sc.attr("CONFIRMED_MODE_CHANGES") = sn::topics::CONFIRMED_MODE_CHANGES;
+        sc.attr("SCC_CAMERA_IMAGE") = sn::topics::SCC_CAMERA_IMAGE;
         sc.attr("LEFT_COLOR_PEAK") = sn::topics::LEFT_COLOR_PEAK;
         sc.attr("RIGHT_COLOR_PEAK") = sn::topics::RIGHT_COLOR_PEAK;
         sc.attr("COLOR_PEAKS_TELEM") = sn::topics::COLOR_PEAKS_TELEM;

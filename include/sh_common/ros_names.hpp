@@ -21,6 +21,7 @@ namespace sh { namespace names {
         DECL(REQUESTED_MODE_CHANGES);
         DECL(CONFIRMED_MODE_CHANGES);
         // Color peak calculation
+        DECL(SCC_CAMERA_IMAGE);
         DECL(LEFT_COLOR_PEAK);
         DECL(RIGHT_COLOR_PEAK);
         DECL(COLOR_PEAKS_TELEM);
@@ -74,6 +75,7 @@ DEFI(params::HEARTBEAT_PERIOD_MS, acc({"heartbeat_period_ms"}));
 DEFI(topics::HEARTBEAT_SUFFIX, acc({"heartbeat"}));
 DEFI(topics::REQUESTED_MODE_CHANGES, acc({"mode_change", "requested"}));
 DEFI(topics::CONFIRMED_MODE_CHANGES, acc({"mode_change", "confirmed"}));
+DEFI(topics::SCC_CAMERA_IMAGE, acc({"scc_image"}));
 DEFI(topics::LEFT_COLOR_PEAK, acc({"color_peaks", "left"}));
 DEFI(topics::RIGHT_COLOR_PEAK, acc({"color_peaks", "right"}));
 DEFI(topics::COLOR_PEAKS_TELEM, acc({"color_peaks", "telem"}));
