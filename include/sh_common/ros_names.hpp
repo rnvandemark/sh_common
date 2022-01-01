@@ -46,6 +46,12 @@ namespace sh { namespace names {
         DECL(REQUEST_SCREEN_COLOR_CALIBRTION);
         DECL(SET_SCREEN_COLOR_HOMOG_POINTS);
     };
+
+    class actions {
+    public:
+        // Sound file playback (sfp)
+        DECL(DOWNLOAD_AUDIO);
+    };
 }}
 
 #undef DECL
@@ -92,5 +98,8 @@ DEFI(topics::WAVE_UPDATES, acc({"wave", "position"}));
 // Services
 DEFI(services::REQUEST_SCREEN_COLOR_CALIBRTION, acc({"screen_color_coordination", "request_calibration"}));
 DEFI(services::SET_SCREEN_COLOR_HOMOG_POINTS, acc({"screen_color_coordination", "set_homog_points"}));
+
+// Actions
+DEFI(actions::DOWNLOAD_AUDIO, acc({"sound_file_playback", "download_audio"}));
 
 #undef DEFI

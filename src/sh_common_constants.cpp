@@ -39,4 +39,10 @@ BOOST_PYTHON_MODULE(sh_common_constants) {
         sc.attr("REQUEST_SCREEN_COLOR_CALIBRTION") = sn::services::REQUEST_SCREEN_COLOR_CALIBRTION;
         sc.attr("SET_SCREEN_COLOR_HOMOG_POINTS") = sn::services::SET_SCREEN_COLOR_HOMOG_POINTS;
     }
+
+    // Add actions
+    {
+        bp::scope sc = bp::class_<sn::actions>("actions", bp::no_init);
+        sc.attr("DOWNLOAD_AUDIO") = sn::actions::DOWNLOAD_AUDIO;
+    }
 }
