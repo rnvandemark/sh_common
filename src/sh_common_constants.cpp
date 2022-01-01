@@ -5,7 +5,7 @@
 namespace bp = boost::python;
 namespace sn = sh::names;
 
-BOOST_PYTHON_MODULE(sh_common_py) {
+BOOST_PYTHON_MODULE(sh_common_constants) {
     // Add parameters
     {
         bp::scope sc = bp::class_<sn::params>("params", bp::no_init);
