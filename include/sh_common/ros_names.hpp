@@ -16,7 +16,7 @@ namespace sh { namespace names {
     class topics {
     public:
         // Heartbeat
-        DECL(HEARTBEAT_SUFFIX);
+        DECL(HEARTBEAT_PREFIX);
         // Mode change
         DECL(REQUESTED_MODE_CHANGES);
         DECL(CONFIRMED_MODE_CHANGES);
@@ -78,7 +78,7 @@ namespace {
 DEFI(params::HEARTBEAT_PERIOD_MS, acc({"heartbeat_period_ms"}));
 
 // Topics
-DEFI(topics::HEARTBEAT_SUFFIX, acc({"heartbeat"}));
+DEFI(topics::HEARTBEAT_PREFIX, acc({"heartbeat"}));
 DEFI(topics::REQUESTED_MODE_CHANGES, acc({"mode_change", "requested"}));
 DEFI(topics::CONFIRMED_MODE_CHANGES, acc({"mode_change", "confirmed"}));
 DEFI(topics::SCC_CAMERA_IMAGE, acc({"scc_image"}));

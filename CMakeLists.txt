@@ -25,9 +25,9 @@ include_directories(include)
 add_library(heartbeat_node SHARED src/heartbeat_node.cpp)
 ament_target_dependencies(heartbeat_node rclcpp std_msgs)
 
-add_library(sh_common_py MODULE src/sh_common_py.cpp)
-target_include_directories(sh_common_py PRIVATE "${Python3_INCLUDE_DIRS}")
-ament_target_dependencies(sh_common_py Boost)
+add_library(sh_common_constants MODULE src/sh_common_constants.cpp)
+target_include_directories(sh_common_constants PRIVATE "${Python3_INCLUDE_DIRS}")
+ament_target_dependencies(sh_common_constants Boost)
 
 install(
     DIRECTORY include/
@@ -35,12 +35,14 @@ install(
 )
 
 install(
-    TARGETS heartbeat_node sh_common_py
+    TARGETS heartbeat_node sh_common_constants
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib
     RUNTIME DESTINATION bin
     INCLUDES DESTINATION include
 )
+
+ament_python_install_package(${PROJECT_NAME})
 
 ament_export_include_directories(include)
 ament_export_dependencies(ament_cmake rclcpp std_msgs Python3)

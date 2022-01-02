@@ -15,7 +15,7 @@ BOOST_PYTHON_MODULE(sh_common_constants) {
     // Add topics
     {
         bp::scope sc = bp::class_<sn::topics>("topics", bp::no_init);
-        sc.attr("HEARTBEAT_SUFFIX") = sn::topics::HEARTBEAT_SUFFIX;
+        sc.attr("HEARTBEAT_PREFIX") = sn::topics::HEARTBEAT_PREFIX;
         sc.attr("REQUESTED_MODE_CHANGES") = sn::topics::REQUESTED_MODE_CHANGES;
         sc.attr("CONFIRMED_MODE_CHANGES") = sn::topics::CONFIRMED_MODE_CHANGES;
         sc.attr("SCC_CAMERA_IMAGE") = sn::topics::SCC_CAMERA_IMAGE;
