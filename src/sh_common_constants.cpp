@@ -22,10 +22,9 @@ BOOST_PYTHON_MODULE(sh_common_constants) {
         sc.attr("LEFT_COLOR_PEAK") = sn::topics::LEFT_COLOR_PEAK;
         sc.attr("RIGHT_COLOR_PEAK") = sn::topics::RIGHT_COLOR_PEAK;
         sc.attr("COLOR_PEAKS_TELEM") = sn::topics::COLOR_PEAKS_TELEM;
-        sc.attr("REQUESTED_PLAYBACK_FILES") = sn::topics::REQUESTED_PLAYBACK_FILES;
-        sc.attr("PLAYBACK_COMMANDS") = sn::topics::PLAYBACK_COMMANDS;
-        sc.attr("PLAYBACK_UPDATES") = sn::topics::PLAYBACK_UPDATES;
-        sc.attr("PLAYBACK_FREQUENCIES") = sn::topics::PLAYBACK_FREQUENCIES;
+        sc.attr("PLAYBACK_BEGIN") = sn::topics::PLAYBACK_BEGIN;
+        sc.attr("PLAYBACK_UPDATES_VERBOSE") = sn::topics::PLAYBACK_UPDATES_VERBOSE;
+        sc.attr("PLAYBACK_STATUS") = sn::topics::PLAYBACK_STATUS;
         sc.attr("INTENSITY_CHANGE_UPDATES") = sn::topics::INTENSITY_CHANGE_UPDATES;
         sc.attr("COUNTDOWN_STATE_UPDATES") = sn::topics::COUNTDOWN_STATE_UPDATES;
         sc.attr("START_WAVE_MODE") = sn::topics::START_WAVE_MODE;
@@ -36,13 +35,13 @@ BOOST_PYTHON_MODULE(sh_common_constants) {
     // Add services
     {
         bp::scope sc = bp::class_<sn::services>("services", bp::no_init);
-        sc.attr("REQUEST_SCREEN_COLOR_CALIBRTION") = sn::services::REQUEST_SCREEN_COLOR_CALIBRTION;
-        sc.attr("SET_SCREEN_COLOR_HOMOG_POINTS") = sn::services::SET_SCREEN_COLOR_HOMOG_POINTS;
+        sc.attr("PLAYBACK_COMMANDS") = sn::services::PLAYBACK_COMMANDS;
     }
 
     // Add actions
     {
         bp::scope sc = bp::class_<sn::actions>("actions", bp::no_init);
         sc.attr("DOWNLOAD_AUDIO") = sn::actions::DOWNLOAD_AUDIO;
+        sc.attr("REQUEST_PLAY_SOUND_FILE") = sn::actions::REQUEST_PLAY_SOUND_FILE;
     }
 }

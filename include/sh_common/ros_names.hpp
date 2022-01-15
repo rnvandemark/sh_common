@@ -26,10 +26,9 @@ namespace sh { namespace names {
         DECL(RIGHT_COLOR_PEAK);
         DECL(COLOR_PEAKS_TELEM);
         // Sound file playback
-        DECL(REQUESTED_PLAYBACK_FILES);
-        DECL(PLAYBACK_COMMANDS);
-        DECL(PLAYBACK_UPDATES);
-        DECL(PLAYBACK_FREQUENCIES);
+        DECL(PLAYBACK_BEGIN);
+        DECL(PLAYBACK_UPDATES_VERBOSE);
+        DECL(PLAYBACK_STATUS);
         // Individual control mode
         DECL(INTENSITY_CHANGE_UPDATES);
         // Countdown mode
@@ -42,15 +41,15 @@ namespace sh { namespace names {
 
     class services {
     public:
-        // Screen color coordinator (scc)
-        DECL(REQUEST_SCREEN_COLOR_CALIBRTION);
-        DECL(SET_SCREEN_COLOR_HOMOG_POINTS);
+        // Sound file playback (sfp)
+        DECL(PLAYBACK_COMMANDS);
     };
 
     class actions {
     public:
         // Sound file playback (sfp)
         DECL(DOWNLOAD_AUDIO);
+        DECL(REQUEST_PLAY_SOUND_FILE);
     };
 }}
 
@@ -85,10 +84,8 @@ DEFI(topics::SCC_CAMERA_IMAGE, acc({"scc_image"}));
 DEFI(topics::LEFT_COLOR_PEAK, acc({"color_peaks", "left"}));
 DEFI(topics::RIGHT_COLOR_PEAK, acc({"color_peaks", "right"}));
 DEFI(topics::COLOR_PEAKS_TELEM, acc({"color_peaks", "telem"}));
-DEFI(topics::REQUESTED_PLAYBACK_FILES, acc({"sound_file_playback", "requested"}));
-DEFI(topics::PLAYBACK_COMMANDS, acc({"sound_file_playback", "commands"}));
-DEFI(topics::PLAYBACK_UPDATES, acc({"sound_file_playback", "telem"}));
-DEFI(topics::PLAYBACK_FREQUENCIES, acc({"sound_file_playback", "frequencies"}));
+DEFI(topics::PLAYBACK_BEGIN, acc({"sound_file_playback", "begin"}));
+DEFI(topics::PLAYBACK_UPDATES_VERBOSE, acc({"sound_file_playback", "verbose_updates"}));
 DEFI(topics::INTENSITY_CHANGE_UPDATES, acc({"device_intensities"}));
 DEFI(topics::COUNTDOWN_STATE_UPDATES, acc({"countdown_state"}));
 DEFI(topics::START_WAVE_MODE, acc({"wave", "requests"}));
@@ -96,10 +93,13 @@ DEFI(topics::WAVE_PARTICIPANT_LOCATION, acc({"wave", "participant_locations"}));
 DEFI(topics::WAVE_UPDATES, acc({"wave", "position"}));
 
 // Services
-DEFI(services::REQUEST_SCREEN_COLOR_CALIBRTION, acc({"screen_color_coordination", "request_calibration"}));
-DEFI(services::SET_SCREEN_COLOR_HOMOG_POINTS, acc({"screen_color_coordination", "set_homog_points"}));
+DEFI(services::PLAYBACK_COMMANDS, acc({"sound_file_playback", "request_command"}));
 
 // Actions
 DEFI(actions::DOWNLOAD_AUDIO, acc({"sound_file_playback", "download_audio"}));
+DEFI(actions::REQUEST_PLAY_SOUND_FILE, acc({"sound_file_playback", "request_play_sound_file"}));
+
+// Special topics
+DEFI(topics::PLAYBACK_STATUS, acc({sh::names::actions::REQUEST_PLAY_SOUND_FILE, "_action", "status"}));
 
 #undef DEFI
