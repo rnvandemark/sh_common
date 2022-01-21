@@ -25,6 +25,10 @@ include_directories(include)
 add_library(heartbeat_node SHARED src/heartbeat_node.cpp)
 ament_target_dependencies(heartbeat_node rclcpp std_msgs)
 
+add_executable(sh_heartbeat_listener_node src/heartbeat_listener_node.cpp)
+target_link_libraries(sh_heartbeat_listener_node heartbeat_node)
+ament_target_dependencies(sh_heartbeat_listener_node rclcpp std_msgs)
+
 add_executable(sh_test_heartbeat_node src/test_heartbeat_node.cpp)
 target_link_libraries(sh_test_heartbeat_node heartbeat_node)
 ament_target_dependencies(sh_test_heartbeat_node rclcpp std_msgs)
@@ -47,7 +51,7 @@ install(
 )
 
 install(
-    TARGETS sh_test_heartbeat_node
+    TARGETS sh_heartbeat_listener_node sh_test_heartbeat_node
     RUNTIME DESTINATION lib/${PROJECT_NAME}
     INCLUDES DESTINATION include
 )
