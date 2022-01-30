@@ -22,7 +22,6 @@ BOOST_PYTHON_MODULE(sh_common_constants) {
         sc.attr("LEFT_COLOR_PEAK") = sn::topics::LEFT_COLOR_PEAK;
         sc.attr("RIGHT_COLOR_PEAK") = sn::topics::RIGHT_COLOR_PEAK;
         sc.attr("COLOR_PEAKS_TELEM") = sn::topics::COLOR_PEAKS_TELEM;
-        sc.attr("PLAYBACK_BEGIN") = sn::topics::PLAYBACK_BEGIN;
         sc.attr("PLAYBACK_UPDATES_VERBOSE") = sn::topics::PLAYBACK_UPDATES_VERBOSE;
         sc.attr("PLAYBACK_STATUS") = sn::topics::PLAYBACK_STATUS;
         sc.attr("INTENSITY_CHANGE_UPDATES") = sn::topics::INTENSITY_CHANGE_UPDATES;

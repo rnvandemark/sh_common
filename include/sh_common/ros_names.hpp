@@ -26,7 +26,6 @@ namespace sh { namespace names {
         DECL(RIGHT_COLOR_PEAK);
         DECL(COLOR_PEAKS_TELEM);
         // Sound file playback
-        DECL(PLAYBACK_BEGIN);
         DECL(PLAYBACK_UPDATES_VERBOSE);
         DECL(PLAYBACK_STATUS);
         // Individual control mode
@@ -84,7 +83,6 @@ DEFI(topics::SCC_CAMERA_IMAGE, acc({"scc_image"}));
 DEFI(topics::LEFT_COLOR_PEAK, acc({"color_peaks", "left"}));
 DEFI(topics::RIGHT_COLOR_PEAK, acc({"color_peaks", "right"}));
 DEFI(topics::COLOR_PEAKS_TELEM, acc({"color_peaks", "telem"}));
-DEFI(topics::PLAYBACK_BEGIN, acc({"sound_file_playback", "begin"}));
 DEFI(topics::PLAYBACK_UPDATES_VERBOSE, acc({"sound_file_playback", "verbose_updates"}));
 DEFI(topics::INTENSITY_CHANGE_UPDATES, acc({"device_intensities"}));
 DEFI(topics::COUNTDOWN_STATE_UPDATES, acc({"countdown_state"}));
