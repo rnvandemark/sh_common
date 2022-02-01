@@ -42,5 +42,6 @@ BOOST_PYTHON_MODULE(sh_common_constants) {
         bp::scope sc = bp::class_<sn::actions>("actions", bp::no_init);
         sc.attr("DOWNLOAD_AUDIO") = sn::actions::DOWNLOAD_AUDIO;
         sc.attr("REQUEST_PLAY_SOUND_FILE") = sn::actions::REQUEST_PLAY_SOUND_FILE;
+        sc.attr("ANALYZE_SOUND_FILE") = sn::actions::ANALYZE_SOUND_FILE;
     }
 }

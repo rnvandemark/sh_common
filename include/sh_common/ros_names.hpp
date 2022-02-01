@@ -49,6 +49,7 @@ namespace sh { namespace names {
         // Sound file playback (sfp)
         DECL(DOWNLOAD_AUDIO);
         DECL(REQUEST_PLAY_SOUND_FILE);
+        DECL(ANALYZE_SOUND_FILE);
     };
 }}
 
@@ -96,6 +97,7 @@ DEFI(services::PLAYBACK_COMMANDS, acc({"sound_file_playback", "request_command"}
 // Actions
 DEFI(actions::DOWNLOAD_AUDIO, acc({"sound_file_playback", "download_audio"}));
 DEFI(actions::REQUEST_PLAY_SOUND_FILE, acc({"sound_file_playback", "request_play_sound_file"}));
+DEFI(actions::ANALYZE_SOUND_FILE, acc({"sound_file_playback", "analyze_sound_file"}));
 
 // Special topics
 DEFI(topics::PLAYBACK_STATUS, acc({sh::names::actions::REQUEST_PLAY_SOUND_FILE, "_action", "status"}));
