@@ -10,7 +10,12 @@
 namespace sh { namespace names {
     class params {
     public:
+        // Heartbeat
         DECL(HEARTBEAT_PERIOD_MS);
+        // Framework for Internal Navigation and Discovery (find)
+        DECL(FIND_HTTP_VERSION);
+        DECL(FIND_SERVER_HOST);
+        DECL(FIND_SERVER_PORT);
     };
 
     class topics {
@@ -76,6 +81,9 @@ namespace {
 
 // Parameters
 DEFI(params::HEARTBEAT_PERIOD_MS, acc({"heartbeat_period_ms"}));
+DEFI(params::FIND_HTTP_VERSION, acc({"find", "http_version"}));
+DEFI(params::FIND_SERVER_HOST, acc({"find", "server_host"}));
+DEFI(params::FIND_SERVER_PORT, acc({"find", "server_port"}));
 
 // Topics
 DEFI(topics::HEARTBEAT_PREFIX, acc({"heartbeat"}));

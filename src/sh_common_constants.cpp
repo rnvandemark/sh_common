@@ -10,6 +10,9 @@ BOOST_PYTHON_MODULE(sh_common_constants) {
     {
         bp::scope sc = bp::class_<sn::params>("params", bp::no_init);
         sc.attr("HEARTBEAT_PERIOD_MS") = sn::params::HEARTBEAT_PERIOD_MS;
+        sc.attr("FIND_HTTP_VERSION") = sn::params::FIND_HTTP_VERSION;
+        sc.attr("FIND_SERVER_HOST") = sn::params::FIND_SERVER_HOST;
+        sc.attr("FIND_SERVER_PORT") = sn::params::FIND_SERVER_PORT;
     }
 
     // Add topics
