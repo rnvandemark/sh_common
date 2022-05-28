@@ -16,6 +16,7 @@ namespace sh { namespace names {
         DECL(FIND_HTTP_VERSION);
         DECL(FIND_SERVER_HOST);
         DECL(FIND_SERVER_PORT);
+        DECL(FIND_SERVER_NODE_NAME);
     };
 
     class topics {
@@ -84,6 +85,7 @@ DEFI(params::HEARTBEAT_PERIOD_MS, acc({"heartbeat_period_ms"}));
 DEFI(params::FIND_HTTP_VERSION, acc({"find", "http_version"}));
 DEFI(params::FIND_SERVER_HOST, acc({"find", "server_host"}));
 DEFI(params::FIND_SERVER_PORT, acc({"find", "server_port"}));
+DEFI(params::FIND_SERVER_NODE_NAME, acc({"find", "server_node_name"}));
 
 // Topics
 DEFI(topics::HEARTBEAT_PREFIX, acc({"heartbeat"}));

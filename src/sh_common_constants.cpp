@@ -13,6 +13,7 @@ BOOST_PYTHON_MODULE(sh_common_constants) {
         sc.attr("FIND_HTTP_VERSION") = sn::params::FIND_HTTP_VERSION;
         sc.attr("FIND_SERVER_HOST") = sn::params::FIND_SERVER_HOST;
         sc.attr("FIND_SERVER_PORT") = sn::params::FIND_SERVER_PORT;
+        sc.attr("FIND_SERVER_NODE_NAME") = sn::params::FIND_SERVER_NODE_NAME;
     }
 
     // Add topics
