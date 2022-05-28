@@ -56,6 +56,13 @@ install(
     INCLUDES DESTINATION include
 )
 
+install(
+    DIRECTORY bin/
+    DESTINATION bin
+    FILES_MATCHING PATTERN "*.sh"
+    PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE
+)
+
 ament_python_install_package(${PROJECT_NAME})
 
 ament_export_include_directories(include)
