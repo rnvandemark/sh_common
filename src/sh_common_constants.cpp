@@ -10,6 +10,7 @@ BOOST_PYTHON_MODULE(sh_common_constants) {
     {
         bp::scope sc = bp::class_<sn::params>("params", bp::no_init);
         sc.attr("HEARTBEAT_PERIOD_MS") = sn::params::HEARTBEAT_PERIOD_MS;
+        sc.attr("TRANSLATOR_ACTOR_COUNT") = sn::params::TRANSLATOR_ACTOR_COUNT;
     }
 
     // Add topics
@@ -30,6 +31,7 @@ BOOST_PYTHON_MODULE(sh_common_constants) {
         sc.attr("START_WAVE_MODE") = sn::topics::START_WAVE_MODE;
         sc.attr("WAVE_PARTICIPANT_LOCATION") = sn::topics::WAVE_PARTICIPANT_LOCATION;
         sc.attr("WAVE_UPDATES") = sn::topics::WAVE_UPDATES;
+        sc.attr("DEMO_ASCII_AUDIO_VISUALIZER") = sn::topics::DEMO_ASCII_AUDIO_VISUALIZER;
     }
 
     // Add services

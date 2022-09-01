@@ -10,7 +10,10 @@
 namespace sh { namespace names {
     class params {
     public:
+        // Heartbeat
         DECL(HEARTBEAT_PERIOD_MS);
+        // Sound file playback
+        DECL(TRANSLATOR_ACTOR_COUNT);
     };
 
     class topics {
@@ -37,6 +40,8 @@ namespace sh { namespace names {
         DECL(START_WAVE_MODE);
         DECL(WAVE_PARTICIPANT_LOCATION);
         DECL(WAVE_UPDATES);
+        // Misc
+        DECL(DEMO_ASCII_AUDIO_VISUALIZER);
     };
 
     class services {
@@ -76,6 +81,7 @@ namespace {
 
 // Parameters
 DEFI(params::HEARTBEAT_PERIOD_MS, acc({"heartbeat_period_ms"}));
+DEFI(params::TRANSLATOR_ACTOR_COUNT, acc({"sound_file_playback", "translator_actor_count"}));
 
 // Topics
 DEFI(topics::HEARTBEAT_PREFIX, acc({"heartbeat"}));
@@ -103,5 +109,7 @@ DEFI(actions::ANALYZE_SOUND_FILE, acc({"sound_file_playback", "analyze_sound_fil
 
 // Special topics
 DEFI(topics::PLAYBACK_STATUS, acc({sh::names::actions::REQUEST_PLAY_SOUND_FILE, "_action", "status"}));
+
+DEFI(topics::DEMO_ASCII_AUDIO_VISUALIZER, acc({"demo_ascii_audio_visualizer"}));
 
 #undef DEFI
